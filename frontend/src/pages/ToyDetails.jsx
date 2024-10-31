@@ -27,7 +27,7 @@ export function ToyDetails() {
   if (!toy) return <Loader />
 
   return (
-    <section className="toy-details" style={{ textAlign: 'center' }}>
+    <section className="toy-details">
       <h1>
         Toy name: <span>{toy.name}</span>
       </h1>
