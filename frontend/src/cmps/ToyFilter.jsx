@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
+import { useEffectUpdate } from '../customHooks/useEffectUpdate'
 import { toyService } from '../services/toy.service'
 import { utilService } from '../services/util.service'
 import { ToySort } from './ToySort'
-import { useEffectUpdate } from '../customHooks/useEffectUpdate'
 
 const toyLabels = toyService.getToyLabels()
 

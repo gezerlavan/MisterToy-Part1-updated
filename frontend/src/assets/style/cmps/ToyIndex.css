@@ -1,6 +1,7 @@
 .toy-index {
-  display: grid;
-  grid-template-rows: auto auto minmax(460px, 1fr) auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .toy-index .pagination {
@@ -8,7 +9,8 @@
 }
 
 .toy-index .loader-container {
-  align-self: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .toy-details span {

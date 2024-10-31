@@ -13,7 +13,7 @@ import { store } from '../store'
 
 export function loadToys() {
   const { filterBy } = store.getState().toyModule
-
+  
   store.dispatch({ type: SET_IS_LOADING, isLoading: true })
 
   return toyService
