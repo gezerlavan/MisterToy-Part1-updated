@@ -11,8 +11,9 @@ export const toyService = {
   save,
 }
 
-function query(filterBy = {}, sortBy = {}) {
+function query(filterBy = {}) {
   let filteredToys = toys
+
   if (filterBy.txt) {
     const regExp = new RegExp(filterBy.txt, 'i')
     filteredToys = filteredToys.filter(toy => regExp.test(toy.name))
@@ -28,6 +29,9 @@ function query(filterBy = {}, sortBy = {}) {
       // filterBy.labels.some(label => toy.labels.includes(label))
     )
   }
+  
+  const sortBy = filterBy.sortBy
+  
   if (sortBy.type) {
     filteredToys.sort((toy1, toy2) => {
       const sortDirection = +sortBy.sortDir

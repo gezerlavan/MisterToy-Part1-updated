@@ -29,9 +29,18 @@ if (process.env.NODE_ENV === 'production') {
 
 // **************** Toys API ****************:
 app.get('/api/toy', (req, res) => {
-  const { filterBy = {}, sortBy = {} } = req.query
+  const { txt, inStock, labels, pageIdx, sortBy } = req.query
+
+  const filterBy = {
+    txt: txt || '',
+    inStock: inStock || null,
+    labels: labels || [],
+    pageIdx: +pageIdx || 0,
+    sortBy: sortBy || { type: '', sortDir: 1 },
+  }
+
   toyService
-    .query(filterBy, sortBy)
+    .query(filterBy)
     .then(toys => {
       res.send(toys)
     })
