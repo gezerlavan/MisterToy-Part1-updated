@@ -78,10 +78,12 @@ export function ToyIndex() {
       </div>
       {isLoading && <Loader />}
       {!isLoading && <ToyList toys={toys} onRemoveToy={onRemoveToy} />}
-      <PaginationButtons
-        pageIdx={filterBy.pageIdx}
-        onChangePageIdx={onChangePageIdx}
-      />
+      {!!toys.length && maxPage > 1 && (
+        <PaginationButtons
+          pageIdx={filterBy.pageIdx}
+          onChangePageIdx={onChangePageIdx}
+        />
+      )}
     </section>
   )
 }
