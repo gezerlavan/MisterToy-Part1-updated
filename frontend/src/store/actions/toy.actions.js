@@ -5,7 +5,6 @@ import {
   SET_FILTER_BY,
   SET_IS_LOADING,
   SET_MAX_PAGE,
-  SET_SORT_BY,
   SET_TOYS,
   TOY_UNDO,
   UPDATE_TOY,
@@ -13,12 +12,12 @@ import {
 import { store } from '../store'
 
 export function loadToys() {
-  const { filterBy, sortBy } = store.getState().toyModule
+  const { filterBy } = store.getState().toyModule
 
   store.dispatch({ type: SET_IS_LOADING, isLoading: true })
 
   return toyService
-    .query(filterBy, sortBy)
+    .query(filterBy)
     .then(({ toys, maxPage }) => {
       store.dispatch({ type: SET_TOYS, toys })
       store.dispatch({ type: SET_MAX_PAGE, maxPage })
@@ -71,8 +70,4 @@ export function saveToy(toy) {
 
 export function setFilter(filterBy = toyService.getDefaultFilter()) {
   store.dispatch({ type: SET_FILTER_BY, filterBy: filterBy })
-}
-
-export function setSort(sortBy = toyService.getDefaultSort()) {
-  store.dispatch({ type: SET_SORT_BY, sortBy: sortBy })
 }

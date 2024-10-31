@@ -20,12 +20,11 @@ export const toyService = {
   remove,
   getEmptyToy,
   getDefaultFilter,
-  getDefaultSort,
   getToyLabels,
 }
 
-function query(filterBy = {}, sortBy, pageIdx) {
-  return httpService.get(BASE_URL, { filterBy, sortBy, pageIdx })
+function query(filterBy = {}) {
+  return httpService.get(BASE_URL, filterBy)
 }
 
 function getById(toyId) {
@@ -47,11 +46,8 @@ function getDefaultFilter() {
     inStock: null,
     labels: [],
     pageIdx: 0,
+    sortBy: { type: '', sortDir: 1 },
   }
-}
-
-function getDefaultSort() {
-  return { type: '', sortDir: 1 }
 }
 
 function getEmptyToy() {

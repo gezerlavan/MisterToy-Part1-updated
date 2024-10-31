@@ -6,7 +6,7 @@ import { useEffectUpdate } from '../customHooks/useEffectUpdate'
 
 const toyLabels = toyService.getToyLabels()
 
-export function ToyFilter({ filterBy, onSetFilter, sortBy, onSetSort }) {
+export function ToyFilter({ filterBy, onSetFilter }) {
   const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy })
   const debouncedOnSetFilter = useRef(utilService.debounce(onSetFilter, 300))
 
@@ -62,7 +62,7 @@ export function ToyFilter({ filterBy, onSetFilter, sortBy, onSetSort }) {
           </>
         </select>
       </form>
-      <ToySort sortBy={sortBy} onSetSort={onSetSort} />
+      <ToySort sortBy={filterBy.sortBy} onSetFilter={onSetFilter} />
     </section>
   )
 }

@@ -13,14 +13,12 @@ import {
   removeToy,
   removeToyOptimistic,
   setFilter,
-  setSort,
 } from '../store/actions/toy.actions'
 import { SET_FILTER_BY } from '../store/reducers/toy.reducer'
 
 export function ToyIndex() {
   const toys = useSelector(storeState => storeState.toyModule.toys)
   const filterBy = useSelector(storeState => storeState.toyModule.filterBy)
-  const sortBy = useSelector(storeState => storeState.toyModule.sortBy)
   const maxPage = useSelector(storeState => storeState.toyModule.maxPage)
   const isLoading = useSelector(
     storeState => storeState.toyModule.flag.isLoading
@@ -33,7 +31,7 @@ export function ToyIndex() {
       console.log('err:', err)
       showErrorMsg('Cannot load toys')
     })
-  }, [filterBy, sortBy])
+  }, [filterBy])
 
   function onRemoveToy(toyId) {
     // removeToy(toyId)
@@ -52,10 +50,6 @@ export function ToyIndex() {
     setFilter(filterBy)
   }
 
-  function onSetSort(sortBy) {
-    setSort(sortBy)
-  }
-
   function onChangePageIdx(diff) {
     let newPageIdx = +filterBy.pageIdx + diff
     if (newPageIdx < 0) newPageIdx = maxPage - 1
@@ -68,8 +62,6 @@ export function ToyIndex() {
       <ToyFilter
         filterBy={filterBy}
         onSetFilter={onSetFilter}
-        sortBy={sortBy}
-        onSetSort={onSetSort}
       />
       <div style={{ marginBlockStart: '0.5em', textAlign: 'center' }}>
         <button style={{ marginInline: 0 }}>

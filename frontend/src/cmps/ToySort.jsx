@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { useEffectUpdate } from '../customHooks/useEffectUpdate'
 
-export function ToySort({ sortBy, onSetSort }) {
+export function ToySort({ sortBy, onSetFilter }) {
   const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })
 
   useEffectUpdate(() => {
-    onSetSort(sortByToEdit)
+    onSetFilter({ sortBy: sortByToEdit })
   }, [sortByToEdit])
 
   function handleChange({ target }) {
