@@ -32,21 +32,13 @@ export function ToyDetails() {
   return (
     <section className="toy-details">
       <ToyImg toyName={toy.name} />
-      <h1>
-        Toy name: <span>{toy.name}</span>
-      </h1>
-      <h1>
-        Toy price: <span>${toy.price}</span>
-      </h1>
-      <h1>
-        Labels: <span>{toy.labels.join(' ,')}</span>
-      </h1>
-      <h1 className={toy.inStock ? 'green' : 'red'}>
+      <p>Toy name: <span>{toy.name}</span></p>
+      <p>Toy price: <span>${toy.price}</span></p>
+      {!!toy.labels.length && <p>Labels: <span>{toy.labels.join(' ,')}</span></p>}
+      <p className={toy.inStock ? 'green' : 'red'}>
         {toy.inStock ? 'In stock' : 'Not in stock'}
-      </h1>
-      <button>
-        <Link to="/toy">Back</Link>
-      </button>
+      </p>
+      <Link className="btn" to="/toy">Back</Link>
     </section>
   )
 }

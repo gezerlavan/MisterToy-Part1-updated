@@ -7,3 +7,7 @@
   flex-wrap: wrap;
   gap: 0.5em;
 }
+
+.toy-filter input, select {
+  flex-basis: 200px;
+}

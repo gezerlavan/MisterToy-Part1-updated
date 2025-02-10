@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { toyService } from '../services/toy.service'
-import { saveToy } from '../store/actions/toy.actions'
 
 export function ToyEdit() {
   const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
@@ -46,7 +45,8 @@ export function ToyEdit() {
 
   function onSaveToy(ev) {
     ev.preventDefault()
-    saveToy(toyToEdit)
+    toyService
+      .save(toyToEdit)
       .then(() => {
         showSuccessMsg('Toy saved successfully')
         navigate('/toy')
@@ -100,7 +100,7 @@ export function ToyEdit() {
           ))}
         </div>
 
-        <button>{toyToEdit._id ? 'Save' : 'Add'}</button>
+        <button className="btn">{toyToEdit._id ? 'Save' : 'Add'}</button>
       </form>
     </section>
   )
