@@ -12,10 +12,12 @@ export function ToyList({ toys, onRemoveToy }) {
             <li key={toy._id}>
               <ToyPreview toy={toy} />
               <div className="flex justify-center">
-                <button>
-                  <Link to={`/toy/edit/${toy._id}`}>Edit</Link>
+                <Link className="btn" to={`/toy/edit/${toy._id}`}>
+                  Edit
+                </Link>
+                <button className="btn" onClick={() => onRemoveToy(toy._id)}>
+                  Remove
                 </button>
-                <button onClick={() => onRemoveToy(toy._id)}>Remove</button>
               </div>
             </li>
           ))}
