@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section className="about">
+    <section className="about" style={{ padding: '1em' }}>
       <h2>About Us</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aperiam

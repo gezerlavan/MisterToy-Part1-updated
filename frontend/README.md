@@ -1,8 +1,27 @@
-# React + Vite
+# Mister-Toy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mister-Toy is a full-stack toy store application built using Vite, React, Node.js, and Express. This project is developed as part of a sprint to create a modern, responsive web application for managing and displaying a collection of toys.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:**
+    - Vite
+    - React
+
+- **Backend:**
+    - Node.js
+    - Express
+
+## Features
+
+- **Toy Management:**
+    - Add, edit, and delete toys
+    - View toy details
+
+- **User Interface:**
+    - Responsive design
+    - User-friendly navigation
+
+- **Backend:**
+    - RESTful API for toy management
+    - Data validation and error handling
