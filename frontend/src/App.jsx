@@ -7,7 +7,6 @@ import { AppHeader } from './cmps/AppHeader'
 import { UserMsg } from './cmps/UserMsg'
 import { About } from './pages/About'
 import { HomePage } from './pages/HomePage'
-import { ToyDashboard } from './pages/ToyDashboard'
 import { ToyDetails } from './pages/ToyDetails'
 import { ToyEdit } from './pages/ToyEdit'
 import { ToyIndex } from './pages/ToyIndex'
@@ -23,7 +22,6 @@ export function App() {
             <Routes>
               <Route element={<HomePage />} path="/" />
               <Route element={<About />} path="/about" />
-              <Route element={<ToyDashboard />} path="/dashboard" />
               <Route element={<ToyIndex />} path="/toy" />
               <Route element={<ToyEdit />} path="/toy/edit/:toyId?" />
               <Route element={<ToyDetails />} path="/toy/:toyId" />

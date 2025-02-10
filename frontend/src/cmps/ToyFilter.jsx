@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { useEffectUpdate } from '../customHooks/useEffectUpdate'
+import { useEffectUpdate } from '../hooks/useEffectUpdate'
 import { toyService } from '../services/toy.service'
 import { utilService } from '../services/util.service'
 import { ToySort } from './ToySort'

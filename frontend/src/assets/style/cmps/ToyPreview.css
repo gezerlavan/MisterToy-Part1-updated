@@ -4,5 +4,14 @@
 }
 
 .toy-preview .toy-name {
+  max-width: 200px;
   font-size: 1.4rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toy-preview .img-container {
+  margin-block-end: 1em;
 }
