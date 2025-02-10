@@ -35,7 +35,7 @@ export function ToyIndex() {
     removeToyOptimistic(toyId)
       .then(() => {
         loadToys()
-        showSuccessMsg('Toy removed')
+        showSuccessMsg('Toy removed successfully')
       })
       .catch(err => {
         console.log('Cannot remove toy', err)
@@ -57,9 +57,9 @@ export function ToyIndex() {
   return (
     <section className="toy-index">
       <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-      <button style={{ alignSelf: 'center' }}>
-        <Link to="/toy/edit">Add Toy</Link>
-      </button>
+      <Link className="btn" to="/toy/edit" style={{ alignSelf: 'center' }}>
+        Add Toy
+      </Link>
       {isLoading && <Loader />}
       {!isLoading && <ToyList toys={toys} onRemoveToy={onRemoveToy} />}
       {!!toys.length && maxPage > 1 && (

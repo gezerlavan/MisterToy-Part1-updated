@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useEffectUpdate } from '../customHooks/useEffectUpdate'
+import { useEffectUpdate } from '../hooks/useEffectUpdate'
 
 export function ToySort({ sortBy, onSetFilter }) {
   const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })

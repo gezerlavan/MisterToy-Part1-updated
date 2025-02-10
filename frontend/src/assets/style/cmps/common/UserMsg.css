@@ -7,18 +7,18 @@
   right: 1em;
 
   font-weight: 700;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 0.2em 0.5em;
 }
 
 .user-msg.success {
-  background-color: var(--gray2);
-  color: var(--gray3);
+  background-color: var(--gray1);
+  color: var(--gray2);
 }
 
 .user-msg.error {
-  background-color: var(--gray2);
-  color: var(--gray3);
+  background-color: var(--gray1);
+  color: var(--gray2);
 }
 
 .user-msg button {

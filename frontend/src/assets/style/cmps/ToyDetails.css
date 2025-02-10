@@ -3,3 +3,12 @@
   flex-direction: column;
   align-items: center;
 }
+
+.toy-details p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.toy-details span {
+  font-weight: initial;
+}
