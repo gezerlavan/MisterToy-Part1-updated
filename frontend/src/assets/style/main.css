@@ -23,3 +23,13 @@
 @import 'cmps/ToyPreview.css';
 @import 'cmps/ToyImg.css';
 @import 'cmps/ToyFilter.css';
+@import 'cmps/Popup.css';
+@import 'cmps/Chat.css';
+
+/* body {
+    background-color: rgb(46, 46, 46);
+} */
+
+/* .toy-list li {
+    background-color: #505050;
+} */

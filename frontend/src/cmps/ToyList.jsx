@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { ToyPreview } from './ToyPreview'
 
@@ -25,4 +26,18 @@ export function ToyList({ toys, onRemoveToy }) {
       )}
     </section>
   )
+}
+
+ToyList.propTypes = {
+  toys: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      name: PropTypes.string,
+      price: PropTypes.number,
+      inStock: PropTypes.bool,
+      createdAt: PropTypes.number,
+      labels: PropTypes.arrayOf(PropTypes.string),
+    })
+  ),
+  onRemoveToy: PropTypes.func.isRequired,
 }

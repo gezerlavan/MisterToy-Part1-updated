@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { toyService } from '../services/toy.service'
+import { useConfirmTabClose } from '../hooks/useConfirmTabClose'
 
 export function ToyEdit() {
   const [toyToEdit, setToyToEdit] = useState(toyService.getEmptyToy())
 
   const { toyId } = useParams()
   const navigate = useNavigate()
+  const setHasUnsavedChanges = useConfirmTabClose()
 
   const labels = toyService.getToyLabels()
 
@@ -31,6 +33,7 @@ export function ToyEdit() {
     const field = target.name
     const value = target.type === 'number' ? +target.value || '' : target.value
     setToyToEdit(prevToy => ({ ...prevToy, [field]: value }))
+    setHasUnsavedChanges(true)
   }
 
   function handleLabelChange({ target }) {
@@ -41,6 +44,7 @@ export function ToyEdit() {
         : [...prevToy.labels, value]
       return { ...prevToy, labels: newLabels }
     })
+    setHasUnsavedChanges(true)
   }
 
   function onSaveToy(ev) {
@@ -92,7 +96,7 @@ export function ToyEdit() {
                 type="checkbox"
                 id={label}
                 value={label}
-                checked={selectedLabels.includes(label)}
+                checked={selectedLabels?.includes(label)}
                 onChange={handleLabelChange}
               />
               <label htmlFor={label}>{label}</label>
