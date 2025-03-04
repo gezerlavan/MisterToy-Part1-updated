@@ -1,10 +1,10 @@
 :root {
-  --clr1: #ff6b6b;
+  --clr1: #6b71ff;
   --clr2: #52b69a;
 
   --clr1bg: #f2f3f7;
   --clr1bg-light: #ffffff;
-  --clr2bg: #ffd56b;
+  --clr2bg: #ececec;
   --clr2bg-light: #f9f3e3;
 
   --gray1: rgb(240, 240, 240);
