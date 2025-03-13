@@ -8,3 +8,7 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.toy-details span {
+  font-weight: initial;
+}

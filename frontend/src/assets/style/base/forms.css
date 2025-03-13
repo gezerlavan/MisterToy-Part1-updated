@@ -15,6 +15,10 @@
   transition: 0.3s;
 }
 
+.btn:disabled {
+  pointer-events: none;
+}
+
 input:focus {
   background-color: var(--clr1bg);
   transition: background-color 1s;
