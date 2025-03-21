@@ -1,6 +1,6 @@
 .app-footer {
-  background-color: var(--clr1);
-  color: var(--clr1bg);
+  background-color: var(--clr-brand1);
+  color: var(--clr-primary);
   padding: 1em;
   text-align: center;
 }

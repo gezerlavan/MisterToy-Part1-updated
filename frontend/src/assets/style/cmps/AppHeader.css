@@ -1,8 +1,8 @@
 .app-header {
   padding: 1em;
 
-  background-color: var(--clr1);
-  color: var(--clr1bg);
+  background-color: var(--clr-brand1);
+  color: var(--clr-primary);
 }
 
 .app-header .logo {
