@@ -3,7 +3,7 @@
 }
 
 html {
-  color: var(--gray2);
+  color: var(--clr-dark);
   font-family: roboto, sans-serif;
 }
 
@@ -29,6 +29,10 @@ a {
   color: unset;
 }
 
+a.active {
+  text-decoration: overline;
+}
+
 /* Dont stretch my Media */
 img,
 embed,
@@ -40,8 +44,4 @@ object {
 /* Simple and useful CSS Debugging Technique */
 .debug * {
   outline: 1px solid gold;
-}
-
-a.active {
-  text-decoration: overline;
 }
