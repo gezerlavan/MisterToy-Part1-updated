@@ -19,7 +19,7 @@
 .loader-container .animation span {
   display: inline-block;
   border-radius: 50vw;
-  background-color: var(--clr2);
+  background-color: var(--clr-brand2);
   width: 2em;
   height: 2em;
   animation: bounce 1.5s infinite ease-in-out both;

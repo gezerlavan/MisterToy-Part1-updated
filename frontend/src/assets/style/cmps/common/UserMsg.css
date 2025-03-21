@@ -12,13 +12,13 @@
 }
 
 .user-msg.success {
-  background-color: var(--gray1);
-  color: var(--gray2);
+  background-color: var(--clr-tertiary);
+  color: var(--clr-dark);
 }
 
 .user-msg.error {
-  background-color: var(--gray1);
-  color: var(--gray2);
+  background-color: var(--clr-tertiary);
+  color: var(--clr-dark);
 }
 
 .user-msg button {

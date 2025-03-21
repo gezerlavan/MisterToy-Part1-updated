@@ -1,6 +1,6 @@
 .btn {
   cursor: pointer;
-  background-color: var(--clr2bg);
+  background-color: var(--clr-secondary);
   margin: 0.5em;
   border: 0;
   padding: 0.5em 0.8em;
@@ -10,7 +10,7 @@
 }
 
 .btn:hover:not(:disabled) {
-  background-color: var(--clr2);
+  background-color: var(--clr-brand2);
   color: white;
   transition: 0.3s;
 }
@@ -19,7 +19,12 @@
   pointer-events: none;
 }
 
+input[type='text'],
+input[type='number'] {
+    font-size: 1rem;
+}
+
 input:focus {
-  background-color: var(--clr1bg);
+  background-color: var(--clr-primary);
   transition: background-color 1s;
 }
